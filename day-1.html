@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day1 Belajar</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kavoon&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <!--- tailwindcss cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style type="text/tailwindcss">
+        @theme{
+            --color-primary-blue: #0C6EFD;
+            --color-primary-orange: #F65B28;
+            --color-primary-black: #0F0F0F;
+            --color-primary-gray: #9B9B9B;
+            --color-secoundary-blue: #F4F9FF;
+            --color-footer-bg: #9B9B9B;
+        }
+
+       @layer utilities {
+            .font-inter {
+                font-family: 'Inter';
+            }
+        }
+
+        .text-responsive {
+            @apply text-[14px] md:text-[16px] lg:text-[18px];
+        }
+        
+        .heading-responsive {
+            @apply text-[24px] md:text-[28px] lg:text-[32px];
+        }
+    </style>
+
+</head>
+<body class="bg-white">
+    <div class="w-full max-w-[400px] md:max-w-[720px] lg:max-w-[1050px] 2xl:max-w-[1500px] mx-auto">
+    
+        <!-- navbar mobile -->
+            <div class="flex flex-col  py-[20px] gap-y-[12px] lg:hidden">
+                <div class="flex flex-row justify-between ">
+                    <div class="flex flex-row items-center">
+                        <img src="logo.svg" alt="" class="w-[150px]">
+                    </div>  
+                    <img src="menu.svg" alt="" id="menu-toggle" class= "w-[28px]">
+                </div>
+                <div id="dropdown-menu" class="flex flex-col gap-y-[4px] hidden ">
+                    <p class="font-inter text-[12px] text-primary-pink font-semibold hover:scale-105" >Menu</p>
+                    <p class="font-inter text-[12px] text-primary-pink font-semibold hover:scale-105" >About Us</p>
+                    <p class="font-inter text-[12px] text-primary-pink font-semibold hover:scale-105" >Deals</p>
+                    <p class="font-inter text-[12px] text-primary-pink font-semibold hover:scale-105" >Blog</p>
+                </div>
+            </div>
+
+        <!-- navbar website -->
+            <div class=" flex-row justify-between items-center hidden lg:flex">
+
+            <div class="flex flex-row items-center ">
+                <img src="logo.svg" alt="" class="w-[150px] h-[80px]">
+            </div>
+
+
+            <!--  Menu -->
+            <div class="flex flex-row gap-x-[40px]">
+                <div class="flex flex-col group">
+                    <p class="font-inter text-[14px] text-primary-blue font-semibold" >Home</p>
+
+                    <div class=" border-b-2 border-primary-blue w-[75%] mx-auto rounded-[12px] group-hover:block"></div>
+                </div>
+
+                <div class="flex flex-col group">
+                    <p class="font-inter text-[14px] text-primary-gray font-semibold" >About Us</p>
+
+                    <div class="hidden border-b-2 border-primary-blue w-[75%] mx-auto rounded-[12px] group-hover:block"></div>
+                </div>
+
+                <div class="flex flex-col group">
+                    <p class="font-inter text-[14px] text-primary-gray font-semibold" >Deals</p>
+
+                    <div class="hidden border-b-2 border-primary-blue w-[75%] mx-auto rounded-[12px] group-hover:block"></div>
+                </div>
+
+                <div class="flex flex-col group">
+                    <p class="font-inter text-[14px] text-primary-gray font-semibold" >Blog</p>
+
+                    <div class="hidden border-b-2 border-primary-blue w-[75%] mx-auto rounded-[12px] group-hover:block"></div>
+                </div>
+            </div>
+
+            <!--  Login -->
+            <a class="rounded-[20px]  px-[32px] py-[6px] bg-primary-blue hover:bg-primary-blue group hover:scale-110">
+                <p class="font-inter text-[16px] text-white font-semibold group-hover:text-white" >Login</p>
+            </a>
+            
+            </div>
+            
+        <!-- isi HOME -->
+            <div class="flex flex-col lg:flex-row lg:items-center gap-y-[20px] lg:gap-y-0 lg:gap-x-[40px] 2xl:gap-x-[180px] py-[20px] lg:py-[20px]">
+                
+                <div class="flex flex-col">
+                    <p class="font-inter text-[20px] text-primary-blue font-black text-justify"> LATEST OFFERING</p>
+                    
+                    <p class="font-inter text-[32px] font-black text-justify">
+                        <span class="text-primary-black">EXCLUSIVE</span> 
+                        <span class="text-primary-blue underline">DEALS,</span>
+                    </p>
+                    
+                    <p class="font-inter text-[32px] font-black text-justify"> 
+                        <span class="text-primary-blue">STAY</span>
+                        <span class="text-primary-orange underline">COMFORTABLE</span>
+                    </p>
+
+                    <p class="font-inter text-[32px] font-black text-justify"> 
+                        <span class="text-primary-orange">AMAZING</span>
+                        <span class="text-primary-black underline">DISCOUNTS</span>
+                    </p>
+
+                    <div class="flex flex-col gap-y-[12px]  lg:gap-x-[20px] mt-[20px]">
+                       <p class="font-inter text-[12px] text-primary-gray font-medium text-justify"> 
+                        Welcome to the new hotel deals landing page! We're excited to introduce you to our latest offering that brings you incredible savings on hotel bookings.
+                    </p>
+
+                    <button class="bg-white border-[1px] border-primary-blue text-primary-blue font-inter font-bold text-[12px] px-4 py-1 w-[120px] rounded-[8px] hover:scale-105">
+                        Discover Now
+                    </button>
+
+                    </div>
+                </div>
+
+                <!-- banner & search -->
+                <div class="relative flex flex-col items-center justify-center">
+                    <!-- Banner -->
+                    <img src="banner.svg" alt="" class="w-[500px] lg:w-[550px]">
+
+                    <!-- Search Box -->
+                    <div class="absolute -bottom-15 right-0 z-10 shadow-lg rounded-[20px] md:rounded-[40px] p-3 md:p-4 bg-white w-full md:w-[600px] lg:w-[700px]">
+                        <div class="flex flex-col md:flex-row justify-between items-center gap-3 md:gap-4">
+                            <!-- Destination -->
+                            <div class="flex items-center space-x-3 w-full md:flex-1">
+                                <img src="location.svg" alt="" class="w-8">
+                                <select class="w-full outline-none bg-transparent text-primary-gray font-inter text-[14px] font-medium">
+                                    <option>To</option>
+                                    <option>Bali</option>
+                                    <option>Jakarta</option>
+                                    <option>Yogyakarta</option>
+                                </select>
+                            </div>
+
+                            <!-- Date -->
+                            <div class="flex items-center space-x-3 w-full md:flex-1">
+                                <img src="date.svg" alt="" class="w-8">
+                                <input 
+                                    type="text" 
+                                    placeholder="Date"
+                                    onfocus="(this.type='date')"
+                                    onblur="if(!this.value) this.type='text'"
+                                    class="w-full outline-none text-primary-gray bg-transparent font-inter text-[14px] font-medium placeholder-primary-gray"
+                                >
+                            </div>
+
+                            <!-- Harga -->
+                            <div class="flex items-center space-x-3 w-full md:flex-1">
+                                <img src="price.svg" alt="" class="w-8">
+                                <select class="w-full outline-none bg-transparent  text-primary-gray font-inter text-[14px] font-medium">
+                                    <option >Amount</option>
+                                    <option>Rp.100.000 - Rp.200.000</option>
+                                    <option>Rp.200.000 - Rp.500.000</option>
+                                    <option> > Rp.500.000</option>
+                                </select>
+                            </div>
+
+                            <!-- Search Button -->
+                            <button class="w-full md:w-auto bg-primary-blue text-white px-4 py-2 rounded-[20px] hover:scale-105 transition-all font-inter font-semibold text-[14px] whitespace-nowrap">
+                                Search
+                            </button>
+                        </div>
+                
+                    </div>
+
+                </div>
+
+            </div>
+
+        <!-- Rooms -->
+            <div class="flex flex-col  lg:items-center gap-y-[20px] lg:gap-y-0 lg:gap-x-[40px] 2xl:gap-x-[180px] py-[20px] lg:py-[20px] mt-[100px]">
+                <div class="flex flex-col items-center ">
+                    <p class="font-inter text-[14px] text-primary-blue font-medium ">Take Yourself</p>
+
+                    <p class="font-inter text-[32px] font-black ">
+                        <span class="text-primary-black">Special</span> 
+                        <span class="text-primary-orange underline decoration-primary-blue ">Rooms,</span>
+                    </p>
+                        
+                    <p class="font-inter text-[12px] text-primary-gray font-medium text-center">
+                        Highlight the exclusive hotel deals offered on the landing page and  explain their benefits
+                    </p>
+                </div>
+
+                <!-- gambar -->
+                <div class="relative w-full px-4 md:px-8 mt-10">
+                    <!-- Tombol scroll kiri -->
+                    <button id="testimoniScrollLeft" class="absolute left-0 top-1/2 -translate-y-1/2 bg-white shadow-md p-2 rounded-full z-10 hidden md:flex items-center justify-center hover:bg-gray-50">
+                        <span class="text-primary-blue">◀</span>
+                    </button>
+
+                    <!-- Container dengan scroll horizontal -->
+                    <div id="testimoniContainer" class="flex gap-4 overflow-x-auto scroll-smooth no-scrollbar pb-4">
+                        <!-- Card 1 -->
+                        <div class="min-w-[280px] md:min-w-[320px] lg:min-w-[350px] bg-white rounded-[20px] shadow-md overflow-hidden hover:scale-105 transition-all flex-shrink-0">
+                            <img src="img1.jpeg" alt="Room 1" class="w-full h-40 md:h-48 object-cover">
+                            <div class="p-3 md:p-4">
+                                <h3 class="font-inter text-[16px] md:text-[18px] font-semibold mb-2">Luxury Suite Room</h3>
+                                <p class="font-inter text-[12px] md:text-[14px] text-primary-gray mb-3 md:mb-4">Experience ultimate comfort in our luxurious suite with stunning views.</p>
+                                <div class="flex justify-between items-center">
+                                    <p class="font-inter text-[14px] md:text-[16px] font-bold text-primary-blue">$299/night</p>
+                                    <button class="bg-primary-blue text-white px-3 md:px-4 py-1.5 md:py-2 rounded-[10px] md:rounded-[12px] text-[12px] md:text-sm hover:bg-blue-600">
+                                        Book Now
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="min-w-[280px] md:min-w-[320px] lg:min-w-[350px] bg-white rounded-[20px] shadow-md overflow-hidden hover:scale-105 transition-all flex-shrink-0">
+                            <img src="img1.jpeg" alt="Room 1" class="w-full h-40 md:h-48 object-cover">
+                            <div class="p-3 md:p-4">
+                                <h3 class="font-inter text-[16px] md:text-[18px] font-semibold mb-2">Luxury Suite Room</h3>
+                                <p class="font-inter text-[12px] md:text-[14px] text-primary-gray mb-3 md:mb-4">Experience ultimate comfort in our luxurious suite with stunning views.</p>
+                                <div class="flex justify-between items-center">
+                                    <p class="font-inter text-[14px] md:text-[16px] font-bold text-primary-blue">$299/night</p>
+                                    <button class="bg-primary-blue text-white px-3 md:px-4 py-1.5 md:py-2 rounded-[10px] md:rounded-[12px] text-[12px] md:text-sm hover:bg-blue-600">
+                                        Book Now
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="min-w-[280px] md:min-w-[320px] lg:min-w-[350px] bg-white rounded-[20px] shadow-md overflow-hidden hover:scale-105 transition-all flex-shrink-0">
+                            <img src="img1.jpeg" alt="Room 1" class="w-full h-40 md:h-48 object-cover">
+                            <div class="p-3 md:p-4">
+                                <h3 class="font-inter text-[16px] md:text-[18px] font-semibold mb-2">Luxury Suite Room</h3>
+                                <p class="font-inter text-[12px] md:text-[14px] text-primary-gray mb-3 md:mb-4">Experience ultimate comfort in our luxurious suite with stunning views.</p>
+                                <div class="flex justify-between items-center">
+                                    <p class="font-inter text-[14px] md:text-[16px] font-bold text-primary-blue">$299/night</p>
+                                    <button class="bg-primary-blue text-white px-3 md:px-4 py-1.5 md:py-2 rounded-[10px] md:rounded-[12px] text-[12px] md:text-sm hover:bg-blue-600">
+                                        Book Now
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="min-w-[280px] md:min-w-[320px] lg:min-w-[350px] bg-white rounded-[20px] shadow-md overflow-hidden hover:scale-105 transition-all flex-shrink-0">
+                            <img src="img1.jpeg" alt="Room 1" class="w-full h-40 md:h-48 object-cover">
+                            <div class="p-3 md:p-4">
+                                <h3 class="font-inter text-[16px] md:text-[18px] font-semibold mb-2">Luxury Suite Room</h3>
+                                <p class="font-inter text-[12px] md:text-[14px] text-primary-gray mb-3 md:mb-4">Experience ultimate comfort in our luxurious suite with stunning views.</p>
+                                <div class="flex justify-between items-center">
+                                    <p class="font-inter text-[14px] md:text-[16px] font-bold text-primary-blue">$299/night</p>
+                                    <button class="bg-primary-blue text-white px-3 md:px-4 py-1.5 md:py-2 rounded-[10px] md:rounded-[12px] text-[12px] md:text-sm hover:bg-blue-600">
+                                        Book Now
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="min-w-[280px] md:min-w-[320px] lg:min-w-[350px] bg-white rounded-[20px] shadow-md overflow-hidden hover:scale-105 transition-all flex-shrink-0">
+                            <img src="img1.jpeg" alt="Room 1" class="w-full h-40 md:h-48 object-cover">
+                            <div class="p-3 md:p-4">
+                                <h3 class="font-inter text-[16px] md:text-[18px] font-semibold mb-2">Luxury Suite Room</h3>
+                                <p class="font-inter text-[12px] md:text-[14px] text-primary-gray mb-3 md:mb-4">Experience ultimate comfort in our luxurious suite with stunning views.</p>
+                                <div class="flex justify-between items-center">
+                                    <p class="font-inter text-[14px] md:text-[16px] font-bold text-primary-blue">$299/night</p>
+                                    <button class="bg-primary-blue text-white px-3 md:px-4 py-1.5 md:py-2 rounded-[10px] md:rounded-[12px] text-[12px] md:text-sm hover:bg-blue-600">
+                                        Book Now
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Tombol scroll kanan -->
+                    <button id="testimoniScrollRight" class="absolute right-0 top-1/2 -translate-y-1/2 bg-white shadow-md p-2 rounded-full z-10 hidden md:flex items-center justify-center hover:bg-gray-50">
+                        <span class="text-primary-blue">▶</span>
+                    </button>
+                </div>
+            </div>
+
+         <!-- Key -->
+            <div class="flex flex-col  lg:items-center gap-y-[20px] lg:gap-y-0 lg:gap-x-[40px] 2xl:gap-x-[180px] py-[20px] lg:py-[20px] mt-[100px]">
+                <div class="flex flex-col items-center ">
+                    <p class="font-inter text-[14px] text-primary-blue font-medium ">Features</p>
+
+                    <p class="font-inter text-[32px] font-black ">
+                        <span class="text-primary-black">Key</span> 
+                        <span class="text-primary-orange underline decoration-primary-blue ">Features</span>
+                    </p>
+                        
+                    <p class="font-inter text-[12px] text-primary-gray font-medium text-center">
+                        Discover the key features that make our hotel deals stand out from the rest.
+                    </p>
+                </div>
+
+                <!-- gambar -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mt-8 px-4">
+                    <div class="bg-white p-4 md:p-6 rounded-[14px] border border-gray-200 hover:bg-primary-blue group transition-all">
+                        <img src="date.svg" alt="" class="w-12 h-12 mb-4 ">
+                        <h3 class="font-inter text-[18px] font-semibold mb-2 group-hover:text-white">Best Price Guarantee</h3>
+                        <p class="font-inter text-[14px] text-primary-gray group-hover:text-white">Find the best hostel deals at the lowest prices. We guarantee that you won't find a better price anywhere else</p>    
+                    </div>
+
+                    <div class="bg-white p-4 md:p-6 rounded-[14px] border border-gray-200 hover:bg-primary-blue group transition-al">
+                        <img src="date.svg" alt="" class="w-12 h-12 mb-4 ">
+                        <h3 class="font-inter text-[18px] font-semibold mb-2 group-hover:text-white">Wide Selection</h3>
+                        <p class="font-inter text-[14px] text-primary-gray group-hover:text-white">Choose from a wide range of hotels, from budget-friendly options to luxury accomodations, to suit your preferences and budget</p>    
+                    </div>
+
+                    <div class="bg-white p-4 md:p-6 rounded-[14px] border border-gray-200 hover:bg-primary-blue group transition-al">
+                        <img src="date.svg" alt="" class="w-12 h-12 mb-4 ">
+                        <h3 class="font-inter text-[18px] font-semibold mb-2 group-hover:text-white">Exclusive Deals</h3>
+                        <p class="font-inter text-[14px] text-primary-gray group-hover:text-white">Acces exclusive deals and discounts that are only available on our hotel deals landing page. save big on your next hotel booking</p>    
+                    </div>
+
+                    <div class="bg-white p-4 md:p-6 rounded-[14px] border border-gray-200 hover:bg-primary-blue group transition-al">
+                        <img src="date.svg" alt="" class="w-12 h-12 mb-4 ">
+                        <h3 class="font-inter text-[18px] font-semibold mb-2 group-hover:text-white">User Reviews</h3>
+                        <p class="font-inter text-[14px] text-primary-gray group-hover:text-white">Read real user reviews and ratings to make informed decisions about the hotels you're interested in. Get insight from yellow travelers</p>    
+                    </div>
+
+                    <div class="bg-white p-4 md:p-6 rounded-[14px] border border-gray-200 hover:bg-primary-blue group transition-al">
+                        <img src="date.svg" alt="" class="w-12 h-12 mb-4 ">
+                        <h3 class="font-inter text-[18px] font-semibold mb-2 group-hover:text-white">Easy Booking Process</h3>
+                        <p class="font-inter text-[14px] text-primary-gray group-hover:text-white">Our streamlined booking process makes it quick and easy to secure your hotel reservation. Book with confidencein just a few clicks</p>    
+                    </div>
+
+                    <div class="bg-white p-4 md:p-6 rounded-[14px] border border-gray-200 hover:bg-primary-blue group transition-al">
+                        <img src="date.svg" alt="" class="w-12 h-12 mb-4 ">
+                        <h3 class="font-inter text-[18px] font-semibold mb-2 group-hover:text-white">Flexible Cancellation Policy</h3>
+                        <p class="font-inter text-[14px] text-primary-gray group-hover:text-white">Enjoy peace of mind with our flexible cancellation policy, Change of cancel your reservation without any hassle or extra fees</p>    
+                    </div>
+                        
+                </div>
+            </div>
+
+        <!-- Nomer -->
+            <div class="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-12 lg:gap-20 bg-secoundary-blue py-6 md:py-8 mt-[100px]">
+                <div class="flex flex-col gap-y-2">
+                    <p class="font-inter text-[28px] md:text-[32px] font-bold text-primary-blue">3780+</p>
+                    <p class="font-inter text-[12px] md:text-[14px] text-primary-black font-bold">Happy Costumers</p>
+                </div>
+
+                <div class="flex flex-col gap-y-2">
+                    <p class="font-inter text-[28px] md:text-[32px] font-bold text-primary-blue">6500+</p>
+                    <p class="font-inter text-[12px] md:text-[14px] text-primary-black font-bold">Total Rooms</p>
+                </div>
+
+                <div class="flex flex-col gap-y-2">
+                    <p class="font-inter text-[28px] md:text-[32px] font-bold text-primary-blue">99.1%</p>
+                    <p class="font-inter text-[12px] md:text-[14px] text-primary-black font-bold">Positive Reviews</p>
+                </div>
+            </div>
+        
+        <!-- Testi -->
+            <div class="flex flex-col  lg:items-center gap-y-[20px] lg:gap-y-0 lg:gap-x-[40px] 2xl:gap-x-[180px] py-[20px] lg:py-[20px] mt-[100px]">
+                    <div class="flex flex-col items-center ">
+                        <p class="font-inter text-[14px] text-primary-blue font-medium ">Blogs</p>
+
+                        <p class="font-inter text-[32px] font-black ">
+                            <span class="text-primary-black">Client</span> 
+                            <span class="text-primary-orange underline decoration-primary-blue ">Testimonials,</span>
+                        </p>
+                        
+                        <p class="font-inter text-[12px] text-primary-gray font-medium text-center">
+                            Testimonials from Satisfied Hotel Clients
+                        </p>
+                    </div>
+
+                    <!-- gambar -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mt-8 px-4">
+                        <!-- Testimonial Card 1 -->
+                        <div class="bg-white p-6 rounded-[20px] shadow-md hover:shadow-lg transition-all">
+                            <div class="flex items-center gap-4 mb-4">
+                                <img src="user1.png" alt="Avatar 1" class="w-12 h-12 rounded-full object-cover">
+                                <div>
+                                    <h4 class="font-inter text-[16px] font-semibold">Sarah Johnson</h4>
+                                    <p class="font-inter text-[12px] text-primary-gray">Business Traveler</p>
+                                </div>
+                            </div>
+                            <p class="font-inter text-[14px] text-primary-gray mb-4">
+                                "Outstanding service and amazing rooms! The deals I found here were unbeatable. Will definitely book again!"
+                            </p>
+                            <div class="flex text-yellow-400">
+                                ★★★★★
+                            </div>
+                        </div>
+                        <!-- Testimonial Card 1 -->
+                        <div class="bg-white p-6 rounded-[20px] shadow-md hover:shadow-lg transition-all">
+                            <div class="flex items-center gap-4 mb-4">
+                                <img src="user2.png" alt="Avatar 1" class="w-12 h-12 rounded-full object-cover">
+                                <div>
+                                    <h4 class="font-inter text-[16px] font-semibold">Mark Lee</h4>
+                                    <p class="font-inter text-[12px] text-primary-gray">Idol</p>
+                                </div>
+                            </div>
+                            <p class="font-inter text-[14px] text-primary-gray mb-4">
+                                "Top-notch service and spotless rooms! The offers here are truly unbeatable. Cant wait to book again!"
+                            </p>
+                            <div class="flex text-yellow-400">
+                                ★★★★★
+                            </div>
+                        </div>
+                        <!-- Testimonial Card 1 -->
+                        <div class="bg-white p-6 rounded-[20px] shadow-md hover:shadow-lg transition-all">
+                            <div class="flex items-center gap-4 mb-4">
+                                <img src="user3.png" alt="Avatar 1" class="w-12 h-12 rounded-full object-cover">
+                                <div>
+                                    <h4 class="font-inter text-[16px] font-semibold">Maliha</h4>
+                                    <p class="font-inter text-[12px] text-primary-gray">Traveler</p>
+                                </div>
+                            </div>
+                            <p class="font-inter text-[14px] text-primary-gray mb-4">
+                                "Perfect blend of comfort and value! The rooms were fantastic and the service was flawless. Already planning my next booking!"
+                            </p>
+                            <div class="flex text-yellow-400">
+                                ★★★★
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+        <!-- Footer -->
+            <div class="bg-secoundary-blue py-6 mt-[100px]">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0 max-w-[720px] lg:max-w-[1200px] mx-auto px-4">
+                    <!-- Menu links - centered -->
+                    <div class="flex flex-row items-center justify-center flex-1 gap-x-8">
+                        <a href="#" class="font-inter text-[14px] text-primary-gray font-medium hover:underline">Menu</a>
+                        <a href="#" class="font-inter text-[14px] text-primary-gray font-medium  hover:underline">About Us</a>
+                        <a href="#" class="font-inter text-[14px] text-primary-gray font-medium  hover:underline">Deals</a>
+                        <a href="#" class="font-inter text-[14px] text-primary-gray font-medium  hover:underline">Blog</a>
+                    </div>
+                </div>
+                <p class="font-inter text-[14px] text-primary-gray text-center mt-4">&copy; 2025 vskiranii. All rights reserved.</p>
+            </div>
+   
+
+    </div>
+
+
+    <script>
+        const menuToggle = document.getElementById("menu-toggle");
+        const dropdownMenu = document.getElementById("dropdown-menu");
+    
+        menuToggle.addEventListener("click", () => {
+            dropdownMenu.classList.toggle("hidden");
+        });
+    </script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const scrollContainer = document.getElementById("scrollContainer");
+        const scrollLeftBtn = document.getElementById("scrollLeft");
+        const scrollRightBtn = document.getElementById("scrollRight");
+
+        if (scrollLeftBtn && scrollRightBtn && scrollContainer) {
+            // Fungsi untuk mengecek apakah scroll di ujung
+            const checkScroll = () => {
+                const isAtStart = scrollContainer.scrollLeft === 0;
+                const isAtEnd = scrollContainer.scrollLeft + scrollContainer.clientWidth >= scrollContainer.scrollWidth;
+                
+                scrollLeftBtn.style.display = isAtStart ? 'none' : 'flex';
+                scrollRightBtn.style.display = isAtEnd ? 'none' : 'flex';
+            };
+
+            // Event listeners untuk tombol scroll
+            scrollLeftBtn.addEventListener("click", () => {
+                scrollContainer.scrollBy({ left: -300, behavior: "smooth" });
+            });
+            
+            scrollRightBtn.addEventListener("click", () => {
+                scrollContainer.scrollBy({ left: 300, behavior: "smooth" });
+            });
+
+            // Event listener untuk scroll
+            scrollContainer.addEventListener('scroll', checkScroll);
+            
+            // Cek scroll saat halaman dimuat
+            checkScroll();
+        }
+    });
+    </script>
+
+    <script>
+        const grid = document.getElementById("scrollGrid");
+        const prevBtn = document.getElementById("prevBtn");
+        const nextBtn = document.getElementById("nextBtn");
+
+        // Scroll dengan tombol
+        const scrollAmount = 220; // jarak geser tiap klik
+        prevBtn.addEventListener("click", () => {
+            grid.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+        });
+        nextBtn.addEventListener("click", () => {
+            grid.scrollBy({ left: scrollAmount, behavior: "smooth" });
+        });
+
+        // Drag manual
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        grid.addEventListener("mousedown", (e) => {
+            isDown = true;
+            grid.classList.add("cursor-grabbing");
+            startX = e.pageX - grid.offsetLeft;
+            scrollLeft = grid.scrollLeft;
+        });
+
+        grid.addEventListener("mouseleave", () => {
+            isDown = false;
+            grid.classList.remove("cursor-grabbing");
+        });
+
+        grid.addEventListener("mouseup", () => {
+            isDown = false;
+            grid.classList.remove("cursor-grabbing");
+        });
+
+        grid.addEventListener("mousemove", (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - grid.offsetLeft;
+            const walk = (x - startX) * 1.5; // kecepatan drag
+            grid.scrollLeft = scrollLeft - walk;
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Testimonial scroll
+            const testimoniContainer = document.getElementById("testimoniContainer");
+            const testimoniScrollLeft = document.getElementById("testimoniScrollLeft");
+            const testimoniScrollRight = document.getElementById("testimoniScrollRight");
+
+            if (testimoniScrollLeft && testimoniScrollRight && testimoniContainer) {
+                testimoniScrollLeft.addEventListener("click", () => {
+                    testimoniContainer.scrollBy({ left: -300, behavior: "smooth" });
+                });
+                
+                testimoniScrollRight.addEventListener("click", () => {
+                    testimoniContainer.scrollBy({ left: 300, behavior: "smooth" });
+                });
+
+                // Optional: Hide/show buttons based on scroll position
+                const checkScroll = () => {
+                    const isAtStart = testimoniContainer.scrollLeft === 0;
+                    const isAtEnd = testimoniContainer.scrollLeft + testimoniContainer.clientWidth >= testimoniContainer.scrollWidth;
+                    
+                    testimoniScrollLeft.style.display = isAtStart ? 'none' : 'flex';
+                    testimoniScrollRight.style.display = isAtEnd ? 'none' : 'flex';
+                };
+
+                testimoniContainer.addEventListener('scroll', checkScroll);
+                checkScroll(); // Check initial state
+            }
+        });
+    </script>
+
+</body>
+</html>
